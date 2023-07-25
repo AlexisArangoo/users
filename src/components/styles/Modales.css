@@ -1,0 +1,47 @@
+.exitocreate-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closecreate{
+    transform: scale(0);
+}
+
+.exitocreate{
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    padding: 2em;
+    text-align: center;
+    background-color: aliceblue;
+    box-shadow: 0 0 0.5em #aaa;
+    border-radius: 0.5em;
+}
+
+.exitocreate-title{
+    margin-bottom: 0.2em;
+    color: rgb(35, 35, 131);
+    text-shadow: 0.2em 0.1em 0.1em #aaa;
+}
+
+.close{
+    position: absolute;
+    top: 1em;
+    right: 1.5em;
+}
+
+.close:hover{
+    cursor: pointer;
+    color: red;
+}
+
+.exitocreate-text{
+   font-size: 1.2rem;
+   font-weight: 500;
+}
