@@ -8,6 +8,8 @@ const FormUser = ({createNewUser, updateInfo, updateUserById, setUpdateInfo, clo
 
    const {register, reset, handleSubmit, watch, formState: { errors }} = useForm()
 
+   const [eye, setEye] = useState(false)
+
    useEffect(() => {
     reset(updateInfo)
    }, [updateInfo])
@@ -42,6 +44,10 @@ const FormUser = ({createNewUser, updateInfo, updateUserById, setUpdateInfo, clo
         })
         setUpdateInfo()
     }
+
+    const handleEye = () => {
+        setEye(!eye)
+    }
     
   return (
     <div onClick={handleCloseForm} className={`formuser-container ${closeForm && 'close-form'}`}>
@@ -65,7 +71,8 @@ const FormUser = ({createNewUser, updateInfo, updateUserById, setUpdateInfo, clo
         </div>
         <div className='formuser-group'>
             <label className={`formuser-label ${errors.password && 'label-err'}`} htmlFor="password">Password</label>
-            <input className={`formuser-input ${errors.password && 'input-err'}`} {...register('password', {required: true})} type='password' id='password' />
+            <span className='container-eye' onClick={handleEye}><i class='bx bx-low-vision'></i></span>
+            <input className={`formuser-input ${errors.password && 'input-err'}`} {...register('password', {required: true})} type={eye ? 'text' : 'password'} id='password' />
             {errors.password && <span className='message-err'>password is required</span>}
         </div>
         <div className='formuser-group'>

@@ -41,10 +41,18 @@
 }
 
 .formuser-group{
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.4em;
     margin-bottom: 0.5em;
+}
+
+.container-eye{
+    position: absolute;
+    top: 2em;
+    right: 0.8em;
+    cursor: pointer;
 }
 
 .formuser-label{
@@ -81,8 +89,12 @@
 }
 
 .message-err{
+    position: absolute;
+    top: 4.1em;
     font-size: 0.7rem;
-    padding-left: 0.8em;
+    margin-left: 0.8em;
+    padding: 0 0.6em;
+    background-color: white;
     color: red;
 }
 
